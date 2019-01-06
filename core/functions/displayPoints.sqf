@@ -1,8 +1,8 @@
-params ["_curator"];
+sleep 1;
 _timeLimit =  "Timelimit" call BIS_fnc_getParamValue;
 if (_timeLimit == -1) then {
 	while {true} do {
-		_points = curatorPoints _curator;
+		_points = curatorPoints getAssignedCuratorLogic player;
 		_displayPoints = round (_points*100);
 		_side = side player;
 		if (_displayPoints >= 60) then {
@@ -45,7 +45,7 @@ if (_timeLimit == -1) then {
 	};
 } else {
 	while {true} do {
-		_points = curatorPoints _curator;
+		_points = curatorPoints getAssignedCuratorLogic player;
 		_displayPoints = round (_points*100);
 		_displayTime = round (((_timeLimit*60) - ELAPSED_TIME)/60);
 		_side = side player;

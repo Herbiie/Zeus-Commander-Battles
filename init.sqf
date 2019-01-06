@@ -36,4 +36,4 @@ if (isServer) then {
 	[] call H_fnc_endMission;
 };
 
-[getAssignedCuratorLogic player ] spawn H_fnc_displayPoints;
+[] spawn H_fnc_displayPoints;

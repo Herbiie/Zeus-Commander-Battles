@@ -19,6 +19,7 @@ class CfgSettings {
 	};
 };
 respawnOnStart = -1;
+enableDebugConsole = 2;
 
 class CfgDebriefing
 {  
