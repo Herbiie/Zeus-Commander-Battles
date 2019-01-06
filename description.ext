@@ -1,0 +1,93 @@
+#include "tb3\loadouts.hpp"
+
+class Extended_PreInit_EventHandlers {
+	class tb3 {
+		init = "call ('tb3\preInit.sqf' call SLX_XEH_COMPILE)";
+	};
+	class itc_framework_zeus {
+		init = "call ('core\preInit.sqf' call SLX_XEH_COMPILE)";
+	};
+};
+
+class CfgSettings {
+	class CBA {
+		class Caching {
+			compile = 0;
+			xeh = 0;
+			functions = 0;
+		};
+	};
+};
+respawnOnStart = -1;
+
+class CfgDebriefing
+{  
+	class majorv
+	{
+		subtitle = "Major Victory";
+		description = "The field is littered with the enemy dead!";
+	};
+	class victory
+	{
+		subtitle = "Decisive Victory";
+		description = "You have won a victory to be proud of today";
+	};
+	class minorv
+	{
+		subtitle = "Close Victory";
+		description = "You have won, but at what cost?";
+	};
+	class majord
+	{
+		subtitle = "Horrific Defeat";
+		description = "You will pay for this shameful display!";
+	};
+	class defeat
+	{
+		subtitle = "Decisive Defeat";
+		description = "We have been roundly beaten today.";
+	};
+	class minord
+	{
+		subtitle = "Close Defeat";
+		description = "You have been bested, but with honour.";
+	};
+};
+
+class Params
+{
+	class TimeAcceleration
+	{
+		title = "Time Acceleration";
+		values[] = {1,2,4,8,12,16,20,24};
+		texts[] = {"1","2","4","8","12","16","20","24"};
+		default = 1;
+		function = "BIS_fnc_paramTimeAcceleration";
+		isGlobal = 1;		
+	};
+	class Daytime
+	{
+		title = "Time of Day";
+		texts[] = {"Morning","Day","Evening","Night"};
+		values[] = {6,12,18,0};
+		default = 12;
+		function = "BIS_fnc_paramDaytime";
+		isGlobal = 1; 
+	};
+	class Timelimit
+	{
+		title = "Time Limit";
+		texts[] = {"Off","30 Minutes","1 Hour","1 Hour 30 Minutes","2 Hours","2 Hours 30 Minutes","3 Hours","3 Hours 30 Minutes","4 Hours","4 Hours 30 Minutes","5 Hours"};
+		values[] = {-1,30,60,90,120,150,180,210,240,270,300};
+		default = 60;
+		isGlobal = 1; 
+	};
+	class PointLimit
+	{
+		title = "Point Limit";
+		texts[] = {"Off","5,000","10,000","15,000","20,000","25,000","30,000","35,000","40,000","45,000","50,000"};
+		values[] = {-1,5000,10000,15000,20000,25000,30000,35000,40000,45000,50000};
+		default = 10000;
+		isGlobal = 1; 
+	};
+};

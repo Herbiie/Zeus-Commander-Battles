@@ -1,0 +1,817 @@
+version=53;
+class EditorData
+{
+	moveGridStep=1;
+	angleGridStep=0.2617994;
+	scaleGridStep=1;
+	autoGroupingDist=10;
+	toggles=1025;
+	class ItemIDProvider
+	{
+		nextID=87;
+	};
+	class MarkerIDProvider
+	{
+		nextID=6;
+	};
+	class Camera
+	{
+		pos[]={3274.3374,81.244347,5709.7075};
+		dir[]={0.52171266,-0.65713418,0.54405236};
+		up[]={0.45482421,0.75377214,0.4743};
+		aside[]={0.72177035,-7.9919118e-008,-0.69213331};
+	};
+};
+binarizationWanted=0;
+addons[]=
+{
+	"A3_Characters_F",
+	"A3_Modules_F_Curator_Curator",
+	"A3_Ui_F",
+	"A3_Modules_F_Curator_Misc"
+};
+class AddonsMetaData
+{
+	class List
+	{
+		items=3;
+		class Item0
+		{
+			className="A3_Characters_F";
+			name="Arma 3 Alpha - Characters and Clothing";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item1
+		{
+			className="A3_Modules_F_Curator";
+			name="Arma 3 Zeus Update - Scripted Modules";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item2
+		{
+			className="A3_Ui_F";
+			name="Arma 3 - User Interface";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+	};
+};
+randomSeed=7919900;
+class ScenarioData
+{
+	author="Herbiie";
+	disabledAI=1;
+	respawn=3;
+	respawnDelay=3;
+	class Header
+	{
+		gameType="Zeus";
+		minPlayers=2;
+		maxPlayers=2;
+	};
+};
+class CustomAttributes
+{
+	class Category0
+	{
+		name="Multiplayer";
+		class Attribute0
+		{
+			property="RespawnTemplates";
+			expression="true";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"ARRAY"
+						};
+					};
+					class value
+					{
+						items=2;
+						class Item0
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="MenuPosition";
+							};
+						};
+						class Item1
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="Counter";
+							};
+						};
+					};
+				};
+			};
+		};
+		nAttributes=1;
+	};
+};
+class Mission
+{
+	class Intel
+	{
+		briefingName="1v1 War of Titans Test";
+		overviewText="1 v 1 Fight for control of Northern Stratis";
+		resistanceWest=0;
+		timeOfChanges=1800.0002;
+		startWeather=0.30000001;
+		startWind=0.1;
+		startWaves=0.1;
+		forecastWeather=0.30000001;
+		forecastWind=0.1;
+		forecastWaves=0.1;
+		forecastLightnings=0.1;
+		year=2035;
+		month=7;
+		day=6;
+		hour=12;
+		minute=0;
+		startFogDecay=0.014;
+		forecastFogDecay=0.014;
+	};
+	class Entities
+	{
+		items=22;
+		class Item0
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={5883.0449,48.840816,5394.6777};
+					};
+					side="West";
+					flags=7;
+					class Attributes
+					{
+						rank="COLONEL";
+						init="call{[this, ""BluFor Command"", ""ZEUS"", ""NATO"", curator1, ""bluforSetup""] spawn H_fnc_setup;}";
+						name="player1";
+						description="BluFor Commander";
+						isPlayer=1;
+					};
+					id=1;
+					type="B_Soldier_F";
+					atlOffset=3.8146973e-006;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male11ENG";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.05;
+								};
+							};
+						};
+						nAttributes=2;
+					};
+				};
+			};
+			class Attributes
+			{
+			};
+			id=0;
+			atlOffset=3.8146973e-006;
+		};
+		class Item1
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={5884.0547,48.804134,5393.8623};
+				angles[]={0.017500184,0,6.2232561};
+			};
+			name="curator1";
+			id=2;
+			type="ModuleCurator_F";
+			atlOffset=3.8146973e-006;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ModuleCurator_F_Owner";
+					expression="_this setVariable ['Owner',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="player1";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ModuleCurator_F_Forced";
+					expression="_this setVariable ['Forced',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="ModuleCurator_F_Name";
+					expression="_this setVariable ['Name',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="";
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="ModuleCurator_F_Addons";
+					expression="_this setVariable ['Addons',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=3;
+						};
+					};
+				};
+				nAttributes=4;
+			};
+		};
+		class Item2
+		{
+			dataType="Marker";
+			position[]={5881.6709,48.985275,5391.771};
+			name="bluforSetup";
+			type="Empty";
+			id=6;
+		};
+		class Item3
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={4500.0005,58.529984,5500};
+				angles[]={6.1220932,0,6.2506957};
+			};
+			areaSize[]={1500,0,1500};
+			areaIsRectangle=1;
+			flags=1;
+			id=19;
+			type="ModuleCoverMap_F";
+		};
+		class Item4
+		{
+			dataType="Marker";
+			position[]={5008.9912,208.43401,5908.2832};
+			name="obj1";
+			type="Empty";
+			id=20;
+			atlOffset=-0.00015258789;
+		};
+		class Item5
+		{
+			dataType="Marker";
+			position[]={4606.7544,128.44019,5299.0815};
+			name="obj2";
+			type="Empty";
+			id=21;
+			atlOffset=-1.2644196;
+		};
+		class Item6
+		{
+			dataType="Marker";
+			position[]={4327.938,177.276,4368.96};
+			name="obj3";
+			type="Empty";
+			id=22;
+			atlOffset=-4.5776367e-005;
+		};
+		class Item7
+		{
+			dataType="Marker";
+			position[]={5705.1758,100.721,5291.9189};
+			name="res1";
+			type="Empty";
+			id=24;
+			atlOffset=-0.0004119873;
+		};
+		class Item8
+		{
+			dataType="Marker";
+			position[]={3865.113,20.264999,5534.9941};
+			name="res2";
+			type="Empty";
+			id=25;
+			atlOffset=-0.00039863586;
+		};
+		class Item9
+		{
+			dataType="Marker";
+			position[]={3500.3689,200.564,4918.0459};
+			name="res3";
+			type="Empty";
+			id=26;
+			atlOffset=0.22660828;
+		};
+		class Item10
+		{
+			dataType="Marker";
+			position[]={4092.2041,221.23,4596.0088};
+			name="res4";
+			type="Empty";
+			id=27;
+		};
+		class Item11
+		{
+			dataType="Marker";
+			position[]={4805.9619,193.304,4399.0508};
+			name="res5";
+			type="Empty";
+			id=28;
+			atlOffset=-0.00042724609;
+		};
+		class Item12
+		{
+			dataType="Marker";
+			position[]={5197.5811,223.155,5021.958};
+			name="res6";
+			type="Empty";
+			id=29;
+			atlOffset=-0.00080871582;
+		};
+		class Item13
+		{
+			dataType="Marker";
+			position[]={4500.5962,105.696,6800.0112};
+			name="res7";
+			type="Empty";
+			id=30;
+			atlOffset=-0.00061035156;
+		};
+		class Item14
+		{
+			dataType="Marker";
+			position[]={4072.292,122.96,6332.6509};
+			name="res8";
+			type="Empty";
+			id=31;
+			atlOffset=-0.00034332275;
+		};
+		class Item15
+		{
+			dataType="Marker";
+			position[]={4883.8721,157.61,6266.3931};
+			name="res9";
+			type="Empty";
+			id=32;
+			atlOffset=-0.00042724609;
+		};
+		class Item16
+		{
+			dataType="Marker";
+			position[]={4454.5591,114.522,4913.1738};
+			name="res10";
+			type="Empty";
+			id=33;
+			atlOffset=-0.00096893311;
+		};
+		class Item17
+		{
+			dataType="Marker";
+			position[]={3271.3411,5.388,5789.5371};
+			name="opforSetup";
+			type="Empty";
+			id=52;
+			atlOffset=7.6293945e-005;
+		};
+		class Item18
+		{
+			dataType="Group";
+			side="East";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={3277.239,5.3337479,5787.3408};
+					};
+					side="East";
+					flags=7;
+					class Attributes
+					{
+						init="call{[this, ""OpFor Command"", ""ZEUS"", ""CSAT"", curator2, ""opforSetup""] spawn H_fnc_setup;}";
+						name="player2";
+						description="OPFOR Commander";
+						isPlayable=1;
+					};
+					id=54;
+					type="O_Soldier_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male01PER";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.02;
+								};
+							};
+						};
+						nAttributes=2;
+					};
+				};
+			};
+			class Attributes
+			{
+			};
+			id=53;
+		};
+		class Item19
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={3283.604,5.254529,5784.1411};
+			};
+			name="curator2";
+			id=59;
+			type="ModuleCurator_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ModuleCurator_F_Owner";
+					expression="_this setVariable ['Owner',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="player2";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ModuleCurator_F_Forced";
+					expression="_this setVariable ['Forced',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="ModuleCurator_F_Name";
+					expression="_this setVariable ['Name',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="";
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="ModuleCurator_F_Addons";
+					expression="_this setVariable ['Addons',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=3;
+						};
+					};
+				};
+				nAttributes=4;
+			};
+		};
+		class Item20
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={3280.2654,5.3400002,5774.6606};
+				angles[]={6.1545672,0,0.17162754};
+			};
+			id=85;
+			type="ModuleRadioChannelCreate_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ModuleRadioChannelCreate_F_Callsign";
+					expression="_this setVariable ['Callsign',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ModuleRadioChannelCreate_F_Name";
+					expression="_this setVariable ['Name',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="";
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="ModuleRadioChannelCreate_F_Color";
+					expression="_this setVariable ['Color',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="[1,1,0,1]";
+						};
+					};
+				};
+				nAttributes=3;
+			};
+		};
+		class Item21
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={5895.4814,48.098827,5392.0508};
+				angles[]={6.1545672,0,0.17162754};
+			};
+			id=86;
+			type="ModuleRadioChannelCreate_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ModuleRadioChannelCreate_F_Callsign";
+					expression="_this setVariable ['Callsign',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ModuleRadioChannelCreate_F_Name";
+					expression="_this setVariable ['Name',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="";
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="ModuleRadioChannelCreate_F_Color";
+					expression="_this setVariable ['Color',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="[1,1,0,1]";
+						};
+					};
+				};
+				nAttributes=3;
+			};
+		};
+	};
+	class Connections
+	{
+		class LinkIDProvider
+		{
+			nextID=2;
+		};
+		class Links
+		{
+			items=2;
+			class Item0
+			{
+				linkID=0;
+				item0=85;
+				item1=59;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item1
+			{
+				linkID=1;
+				item0=86;
+				item1=2;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+		};
+	};
+};
