@@ -36,4 +36,3 @@ if (isServer) then {
 	[] call H_fnc_endMission;
 };
 
-[] spawn H_fnc_displayPoints;

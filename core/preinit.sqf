@@ -11,3 +11,4 @@ H_fnc_setUpCuratorInd = compile (preprocessFileLineNumbers "Core\functions\setUp
 H_fnc_displayPoints = compile (preprocessFileLineNumbers "Core\functions\displayPoints.sqf");
 H_fnc_Objective = compile (preprocessFileLineNumbers "Core\functions\objective.sqf");
 H_fnc_Resource = compile (preprocessFileLineNumbers "Core\functions\resource.sqf");
+H_fnc_RemoveObjects = compile (preprocessFileLineNumbers "Core\functions\removeObjects.sqf");

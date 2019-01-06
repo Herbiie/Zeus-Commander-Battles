@@ -9,6 +9,12 @@ class Extended_PreInit_EventHandlers {
 	};
 };
 
+class Extended_PostInit_EventHandlers {
+    class itc_postinit {
+        init = "call compile preprocessFileLineNumbers 'XEH_postInit.sqf'";
+    };
+};
+
 class CfgSettings {
 	class CBA {
 		class Caching {

@@ -8,7 +8,7 @@ class EditorData
 	toggles=1025;
 	class ItemIDProvider
 	{
-		nextID=87;
+		nextID=88;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={3274.3374,81.244347,5709.7075};
-		dir[]={0.52171266,-0.65713418,0.54405236};
-		up[]={0.45482421,0.75377214,0.4743};
-		aside[]={0.72177035,-7.9919118e-008,-0.69213331};
+		pos[]={3108.2949,88.980095,5574.4678};
+		dir[]={-0.43447188,-0.30870703,0.84612948};
+		up[]={-0.14101198,0.95115685,0.27461937};
+		aside[]={0.88957894,-1.9557774e-008,0.45678249};
 	};
 };
 binarizationWanted=0;
@@ -155,7 +155,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=22;
+		items=20;
 		class Item0
 		{
 			dataType="Group";
@@ -636,181 +636,6 @@ class Mission
 					};
 				};
 				nAttributes=4;
-			};
-		};
-		class Item20
-		{
-			dataType="Logic";
-			class PositionInfo
-			{
-				position[]={3280.2654,5.3400002,5774.6606};
-				angles[]={6.1545672,0,0.17162754};
-			};
-			id=85;
-			type="ModuleRadioChannelCreate_F";
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="ModuleRadioChannelCreate_F_Callsign";
-					expression="_this setVariable ['Callsign',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"STRING"
-								};
-							};
-							value="";
-						};
-					};
-				};
-				class Attribute1
-				{
-					property="ModuleRadioChannelCreate_F_Name";
-					expression="_this setVariable ['Name',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"STRING"
-								};
-							};
-							value="";
-						};
-					};
-				};
-				class Attribute2
-				{
-					property="ModuleRadioChannelCreate_F_Color";
-					expression="_this setVariable ['Color',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"STRING"
-								};
-							};
-							value="[1,1,0,1]";
-						};
-					};
-				};
-				nAttributes=3;
-			};
-		};
-		class Item21
-		{
-			dataType="Logic";
-			class PositionInfo
-			{
-				position[]={5895.4814,48.098827,5392.0508};
-				angles[]={6.1545672,0,0.17162754};
-			};
-			id=86;
-			type="ModuleRadioChannelCreate_F";
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="ModuleRadioChannelCreate_F_Callsign";
-					expression="_this setVariable ['Callsign',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"STRING"
-								};
-							};
-							value="";
-						};
-					};
-				};
-				class Attribute1
-				{
-					property="ModuleRadioChannelCreate_F_Name";
-					expression="_this setVariable ['Name',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"STRING"
-								};
-							};
-							value="";
-						};
-					};
-				};
-				class Attribute2
-				{
-					property="ModuleRadioChannelCreate_F_Color";
-					expression="_this setVariable ['Color',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"STRING"
-								};
-							};
-							value="[1,1,0,1]";
-						};
-					};
-				};
-				nAttributes=3;
-			};
-		};
-	};
-	class Connections
-	{
-		class LinkIDProvider
-		{
-			nextID=2;
-		};
-		class Links
-		{
-			items=2;
-			class Item0
-			{
-				linkID=0;
-				item0=85;
-				item1=59;
-				class CustomData
-				{
-					type="Sync";
-				};
-			};
-			class Item1
-			{
-				linkID=1;
-				item0=86;
-				item1=2;
-				class CustomData
-				{
-					type="Sync";
-				};
 			};
 		};
 	};

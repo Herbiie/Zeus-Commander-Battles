@@ -42,4 +42,4 @@ _curator addCuratorEditingArea [0,getMarkerPos _setup,50];
 _curator setCuratorEditingAreaType true;
 _curator addCuratorCameraArea [0,getMarkerPos _setup,50];
 _curator setCuratorCameraAreaCeiling 50;
-[west,getMarkerPos _setup] call BIS_fnc_addRespawnPosition; 
+[west,getMarkerPos _setup] call BIS_fnc_addRespawnPosition;
