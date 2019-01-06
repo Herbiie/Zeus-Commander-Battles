@@ -35,3 +35,5 @@ if (isServer) then {
 	waitUntil {(H_bluePoints >= "PointLimit" call BIS_fnc_getParamValue) OR (H_redPoints == "PointLimit" call BIS_fnc_getParamValue) or (H_greenPoints == "PointLimit" call BIS_fnc_getParamValue)};
 	[] call H_fnc_endMission;
 };
+
+[getAssignedCuratorLogic player ] spawn H_fnc_displayPoints;

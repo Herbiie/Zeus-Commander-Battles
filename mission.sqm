@@ -134,7 +134,7 @@ class Mission
 {
 	class Intel
 	{
-		briefingName="1v1 War of Titans Test";
+		briefingName="ZCB 1v1 Zeus Commander Battle Test";
 		overviewText="1 v 1 Fight for control of Northern Stratis";
 		resistanceWest=0;
 		timeOfChanges=1800.0002;

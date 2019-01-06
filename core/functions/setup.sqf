@@ -17,4 +17,4 @@ _EH = player addEventHandler ["killed", {
 	params ["_unit", "_killer", "_instigator", "_useEffects"];
 	[_this select 0] call H_fnc_savegear;
 }];
-	[_unit, _curator] remoteExec ["H_fnc_displayPoints",clientOwner];
+	
